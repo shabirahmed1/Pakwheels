@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakWheels</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+    p{
+        color: #000;
+    }
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    }
+    
+    .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    }
+    
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+    height: 42px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: aliceblue;
+    color: #000;
+    }
+    
+    .search-bar button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    }
+    
+    .advanced-filter button {
+    padding: 10px 18px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+
+    .navbar-top {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-top a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar-bottom {
+      background-color: #555;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 300px;
+      margin-top: 10px;
+    }
+
+    .slider {
+      display: flex;
+      width: 800%; /* 8 images */
+      animation: slide 5s linear infinite;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-700%); }
+    }
+
+    </style>
+</head>
+<body>
+    <div  style=" background: linear-gradient(to bottom, #001f3f, #003366);">
+    <header class="text-gray-600 body-font " style=" background: linear-gradient(to bottom, #001f3f, #003366); margin-top: 0%;">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          
+             <img src="./imag/logo.svg" alt="" width="170px">
+            
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center  " style=" color: aliceblue; font-size: 15px;   margin-top: 0px; padding-top: 0px; ">
+                <a class="mr-9 hover:text-gray-900  " style="padding-left: 600px; padding-right: 20px;">Used Cars</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">New Cars</a>
+                <a class="mr-9 hover:text-gray-900"  style="padding-left: 10px; padding-right: 17px;">Bikes</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Auto Store</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Videos</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Forums</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Blog</a>
+                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">More</a>
+            </nav>
+           
+        </div>
+    </header>
+
+
+<div style="padding: 70px;">
+    <h1 style=" font-size: 70px;">Find Used Cars in Pakistan</h1>
+    <p style=" margin-bottom: 30px;">With thousands of cars, we have just the right one for you</p>
+    
+<div class="search-bar">
+    <input type="text" placeholder="Car Make or Model" />
+    <select class="dropdown">
+        <option>All Cities</option>
+        <option>Lahore</option>
+        <option>Karachi</option>
+        <option>Islamabad</option>
+    </select>
+    <select class="price-range">
+        <option>Price Range</option>
+        <option>0 - 5 Lakh</option>
+        <option>5 - 10 Lakh</option>
+        <option>10 - 20 Lakh</option>
+        <option>20 - 30 Lakh</option>
+    </select>
+    <button class="search-button">&#128269;</button>
+</div>
+
+<div class="advanced-filter" style=" margin-top: 30px;">
+    <button>Advanced Filter →</button>
+</div>
+ 
+</div>
+
+
+<div style="background-color: aliceblue;">
+    <h2 style="color:#001f3f; font-size: 35px; font-weight: bold; padding-top: 30px; text-align: center;">
+        Sell Your Car on PakWheels and Get the Best Price
+    </h2>
+
+    <section style="display: flex; justify-content: space-around; align-items: flex-start; padding: 50px;">
+
+        <!-- Left Side -->
+        <div style="flex: 1; max-width: 45%;">
+            <h3 style="color:#001f3f; font-size: 25px; font-weight: bold;">Post your Ad on PakWheels</h3>
+            <p>Post your Ad for Free in 3 Easy Steps</p>
+            <p>Get Genuine offers from Verified Buyers</p>
+            <p>Sell your car Fast at the Best Price</p>
+            <br>
+            <button
+                style="background-color: rgb(155, 33, 33); color: white; font-size: 24px; padding: 11px 22px; border: 3px solid black; border-radius: 8px; cursor: pointer;">
+                Post Your Ad
+            </button>
+        </div>
+
+        <!-- Right Side -->
+        <div style="flex: 1; max-width: 45%;">
+            <h3 style="color:#001f3f; font-size: 25px; font-weight: bold;">Try PakWheels Sell It For Me</h3>
+            <p>Dedicated Sales Expert to Sell your Car</p>
+            <p>We Bargain for you and share the Best Offer</p>
+            <p>We ensure Safe & Secure Transaction</p>
+            <br>
+            <button
+                style="background-color: yellowgreen; color: white; font-size: 24px; padding: 11px 22px; border: 3px solid black; border-radius: 8px; cursor: pointer;">
+                Register your Car
+            </button>
+        </div>
+
+    </section>
+</div>
+
+
+
+
+<div style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background:#001f3f; margin-bottom: 50px;">
+
+    <h2 style="font-size: 25px;">Category Slider</h2>
+    <div id="sliderContainer"
+        style="overflow: hidden; cursor: grab; border-radius: 10px; background: #001f3f; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div id="slider" style="display: flex; gap: 20px; padding: 20px;">
+            <!-- Category 1 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 1.webp" alt="Category 1"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Automatic cars</div>
+            </div>
+            <!-- Category 2 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 2.webp" alt="Category 2"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Family Cars</div>
+            </div>
+            <!-- Category 3 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 3.webp" alt="Category 3"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Small Cars</div>
+            </div>
+            <!-- Category 4 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 4.webp" alt="Category 4"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>5 seater Cars</div>
+            </div>
+            <!-- Category 5 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 5.webp" alt="Category 5"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Big Cars</div>
+            </div>
+            <!-- Category 6 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 6.webp" alt="Category 6"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Imported cars</div>
+            </div>
+            <!-- Category 7 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 7.webp" alt="Category 7"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>Old Cars</div>
+            </div>
+            <!-- Category 8 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 8.webp" alt="Category 8"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>5 door Cars</div>
+            </div>
+            <!-- Category 9 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 9.webp" alt="Category 9"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>4 door Cars</div>
+            </div>
+            <!-- Category 10 -->
+            <div
+                style="min-width:550px; height:420px; background: white; color:#001f3f; display:flex; flex-direction: column; justify-content:center; align-items:center; border-radius:10px; flex-shrink:0; font-weight:bold;">
+                <img src="./imag/c 10.webp" alt="Category 10"
+                    style="width: 80%; height: 80%; border-radius: 10px; margin-bottom: 10px;">
+                <div>1000cc cars</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sliderContainer = document.getElementById('sliderContainer');
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        sliderContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - sliderContainer.offsetLeft;
+            scrollLeft = sliderContainer.scrollLeft;
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        sliderContainer.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            sliderContainer.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+</div>
+
+
+<div style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px 0; background-color: #f8f9fa;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 28px; font-weight: 600;">
+            Popular Cars 
+        </h2>
+
+        <div id="carContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 20px;">
+            <!-- Card 1 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/new-cars/toyota/corolla/" style="text-decoration: none;">
+                    <img src="./imag/p 1.jpg" 
+                        alt="Toyota Corolla" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        Toyota Corolla
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 59.7 - 75.5 lacs
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★★☆</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(725 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/new-cars/suzuki/alto/" style="text-decoration: none;">
+                    <img src="./imag/p 2.jpg" 
+                        alt="Suzuki Alto" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        Suzuki Alto
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 23.3 - 31.4 lacs
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★★★</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(664 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/new-cars/toyota/fortuner/" style="text-decoration: none;">
+                    <img src="./imag/p 3.png" 
+                        alt="Toyota Fortuner" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        Toyota Fortuner
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 1.45 - 1.99 crore
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★☆☆</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(1198 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px 0; background-color: #f8f9fa;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 28px; font-weight: 600;">
+            Popular Bikes 
+        </h2>
+
+        <div id="carContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 20px;">
+            <!-- Card 1 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/bikes/benelli/trk-502x/" style="text-decoration: none;">
+                    <img src="./imag/b 1.jpg" 
+                        alt="Benelli TRK 502X" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        Benelli TRK 502X
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 2,950,000
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★★☆</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(7125 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/bikes/benelli/tnt-150i/" style="text-decoration: none;">
+                    <img src="./imag/b 2.jpg" 
+                        alt="Benelli TNT 150i" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        Benelli TNT 150i
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 830,000
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★★★</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(2664 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="car-card" style="background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
+                <a href="https://www.pakwheels.com/bikes/bmw/s1000rr/" style="text-decoration: none;">
+                    <img src="./imag/b 3.jpg " 
+                        alt="BMW S1000RR" 
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="color: #2c3e50; margin: 15px 0 10px; font-size: 20px; font-weight: 600;">
+                        BMW S1000RR
+                    </h3>
+                    <div style="color: #27ae60; font-size: 18px; font-weight: 500; margin-bottom: 12px;">
+                        PKR 12,600,000
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: #f39c12;">
+                        <span>★★★☆☆</span>
+                        <span style="color: #7f8c8d; font-size: 14px;">(1783 Reviews)</span>
+                    </div>
+                </a>
+            </div>
+
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<footer style="background-color: #001f3f; color: white; padding: 40px 0; font-family: 'Arial', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <!-- Cars By Make Section -->
+            <div>
+                <h3 style="color: #fff; margin-bottom: 20px; font-size: 18px;">Cars By Make</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Toyota Cars for Sale</a></li>
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Suzuki Cars for Sale</a></li>
+                    <!-- Add all other make links following same pattern -->
+                </ul>
+            </div>
+
+            <!-- Cars By City Section -->
+            <div>
+                <h3 style="color: #fff; margin-bottom: 20px; font-size: 18px;">Cars By City</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Cars in Karachi</a></li>
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Cars in Lahore</a></li>
+                    <!-- Add all other city links -->
+                </ul>
+            </div>
+
+            <!-- Explore PakWheels Section -->
+            <div>
+                <h3 style="color: #fff; margin-bottom: 20px; font-size: 18px;">Explore PakWheels</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Used Cars</a></li>
+                    <li><a href="#" style="color: #ddd; text-decoration: none; line-height: 2;">Used Bikes</a></li>
+                    <!-- Add all other explore links -->
+                </ul>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div>
+                <h3 style="color: #fff; margin-bottom: 20px; font-size: 18px;">Subscribe to our Newsletter</h3>
+                <input type="email" placeholder="name@email.com" 
+                       style="padding: 10px; border-radius: 5px; border: none; width: 80%; margin-bottom: 15px;">
+                <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                    Subscribe
+                </button>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 18px;">Follow Us</h3>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Bottom Copyright -->
+    <div style="background-color: #00152b; padding: 20px 0; margin-top: 40px;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center; color: #ddd;">
+            <p>© 2023 PakWheels.com - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html> 
