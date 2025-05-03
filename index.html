@@ -106,28 +106,63 @@
     </style>
 </head>
 <body>
-    <div  style=" background: linear-gradient(to bottom, #001f3f, #003366);">
-    <header class="text-gray-600 body-font " style=" background: linear-gradient(to bottom, #001f3f, #003366); margin-top: 0%;">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          
-             <img src="./imag/logo.svg" alt="" width="170px">
-            
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center  " style=" color: aliceblue; font-size: 15px;   margin-top: 0px; padding-top: 0px; ">
-                <a class="mr-9 hover:text-gray-900  " style="padding-left: 600px; padding-right: 20px;">Used Cars</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">New Cars</a>
-                <a class="mr-9 hover:text-gray-900"  style="padding-left: 10px; padding-right: 17px;">Bikes</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Auto Store</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Videos</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Forums</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">Blog</a>
-                <a class="mr-9 hover:text-gray-900"   style="padding-left: 10px; padding-right: 17px;">More</a>
-            </nav>
-           
-        </div>
-    </header>
+    <div class="bg-[#001f3f]">
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 md:px-8 md:py-6 flex-col md:flex-row items-center">
+                <!-- Logo Section -->
+                <div class="flex items-center justify-between w-full md:w-auto">
+                    <img src="./imag/logo.svg" alt="Logo" class="w-32 md:w-40 md:mr-12">
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" id="menu-btn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links - Centered for Laptop -->
+                <nav class="md:flex-1 flex flex-wrap items-center text-base justify-center md:flex hidden" id="nav-links" style="color: white;">
+                    <div class="flex md:space-x-8 lg:space-x-10 xl:space-x-12">
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Used Cars</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">New Cars</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Bikes</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Auto Store</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Videos</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Forums</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">Blog</a>
+                        <a class="hover:text-gray-300 px-2 py-1 md:px-4 md:py-2" style="margin-left: 10px; margin-right: 10px; font-size: 15px;">More</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden w-full" id="mobile-menu" style="color: white;">
+                <div class="px-2 pt-2 pb-3 space-y-1 text-center">
+                    <a class="block px-3 py-2 hover:bg-gray-700">Used Cars</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">New Cars</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">Bikes</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">Auto Store</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">Videos</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">Forums</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">Blog</a>
+                    <a class="block px-3 py-2 hover:bg-gray-700">More</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 
-<div style="padding: 70px;">
+<div style="padding: 70p ; background-color: #001f3f ; padding-top: 30px; padding-bottom: 30px;" >
     <h1 style=" font-size: 70px;">Find Used Cars in Pakistan</h1>
     <p style=" margin-bottom: 30px;">With thousands of cars, we have just the right one for you</p>
     
